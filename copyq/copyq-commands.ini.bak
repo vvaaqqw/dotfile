@@ -1,0 +1,71 @@
+[Commands]
+1\Automatic=true
+1\Command="copyq:\nvar time = dateString('yyyy-MM-dd hh:mm:ss')\nsetData('application/x-copyq-user-copy-time', time)\nvar tagsMime = 'application/x-copyq-tags'\nvar tags = str(data(tagsMime)) + ', ' + time\nsetData(tagsMime, tags)"
+1\Icon=\xf017
+1\Name=Store Copy Time
+10\Command=copyq: plugins.itemtags.untag(decodeURIComponent('Important'))
+10\Icon=\xf02b
+10\InMenu=true
+10\InternalId=copyq_tags_untag:Important
+10\MatchCommand=copyq: plugins.itemtags.hasTag(decodeURIComponent('Important')) || fail()
+10\Name=Remove tag \x201cImportant\x201d
+11\Command=copyq: plugins.itemtags.tag()
+11\Icon=\xf02b
+11\InMenu=true
+11\InternalId=copyq_tags_tag
+11\Name=Add a Tag
+12\Command=copyq: plugins.itemtags.untag()
+12\Icon=\xf02b
+12\InMenu=true
+12\Input=application/x-copyq-tags
+12\InternalId=copyq_tags_untag
+12\Name=Remove a Tag
+13\Command=copyq: plugins.itemtags.clearTags()
+13\Icon=\xf02b
+13\InMenu=true
+13\Input=application/x-copyq-tags
+13\InternalId=copyq_tags_clear
+13\Name=Clear all tags
+2\Automatic=true
+2\Icon=\xf21b
+2\Input=x-kde-passwordManagerHint
+2\Name=KeePassXC protector v3
+2\Remove=true
+3\Automatic=true
+3\Command="copyq:\nvar imageTab = '&Images';\nfunction startsWith(text, what) {\n    return what === text.substring(0, what.length)\n}\nfunction hasImageFormat(formats) {\n    for (var format of formats.values()) {\n        if (startsWith(format, 'image/'))\n            return true;\n    }\n    return false;\n}\nvar formats = dataFormats();\nif (hasImageFormat(formats)) {\n    setData(mimeOutputTab, imageTab);\n}"
+3\Icon=\xf302
+3\Name=Image Tab
+4\Automatic=true
+4\Command="copyq:\nvar tabName = 'BIG'\nvar minBytes = 250*1000\n\nfunction hasBigData() {\n    var itemSize = 0\n    var formats = dataFormats()\n    for (var i in formats) {\n        itemSize += data(formats[i]).size()\n        if (itemSize >= minBytes)\n            return true\n    }\n    return false\n}\n\nif (hasBigData()) {\n    setData(mimeOutputTab, tabName)\n}"
+4\Icon=\xf1c0
+4\Name=Big Data Tab
+5\Command="copyq:\n// Name for tab for storing matching items.\nvar search_tab_name = \"Search\"\n// Returns true iff item at index matches regex.\nfunction item_matches(item_index, re)\n{\n    var item = getitem(j)\n    var note = str(item[mimeItemNotes])\n    var text = str(item[mimeText])\n    return text && (re.test(text) || re.test(note))\n}\n// Ask for search expression.\nvar match = dialog(\"Search\")\nif (!match)\n  abort()\nvar re = new RegExp(match,'i') // 'i' case-insensitive\n// Clear tab with results.\ntry {\n  removeTab(search_tab_name)\n} catch (e) {}\n// Search all tabs.\nvar tab_names = tab()\nfor (var i in tab_names) {\n  var tab_name = tab_names[i]\n  tab(tab_name)\n  var item_count = count()\n  // Search all items in tab.\n  for (var j = 0; j < item_count; ++j) {\n    // Add matching item to tab with results.\n    if (item_matches(j, re)) {\n      var item = getItem(j)\n      tab(search_tab_name)\n      setItem(j, item)\n      tab(tab_name)\n    }\n  }\n}\nshow(search_tab_name)"
+5\Icon=\xf002
+5\InMenu=true
+5\Name=Search All Tabs
+5\Shortcut=ctrl+shift+f
+6\Command="copyq:\nvar suffices = {\n  'image/svg': 'svg',\n  'image/png': 'png',\n  'image/jpeg': 'jpg',\n  'image/jpg': 'jpg',\n  'image/bmp': 'bmp',\n  'text/html': 'html',\n  'text/plain' : 'txt',\n}\n\nfunction hasSuffix(fileName)\n{\n  return /\\.[0-9a-zA-z]+$/.test(fileName);\n}\n\nfunction addSuffix(fileName, format)\n{\n  var suffix = suffices[format]\n  return suffix ? fileName + \".\" + suffix : fileName\n}\n\nfunction filterFormats(format)\n{\n  return /^[a-z]/.test(format) && !/^application\\/x/.test(format)\n}\n\nfunction itemFormats(row)\n{\n  return str(read('?', row))\n    .split('\\n')\n    .filter(filterFormats)\n}\n\nfunction formatPriority(format)\n{\n  var k = Object.keys(suffices);\n  var i = k.indexOf(format);\n  return i === -1 ? k.length : i\n}\n\nfunction reorderFormats(formats)\n{\n  formats.sort(function(lhs, rhs){\n    var i = formatPriority(lhs);\n    var j = formatPriority(rhs);\n    return i === j ? lhs.localeCompare(rhs) : i - j;\n  })\n}\n\nif (selectedtab()) tab(selectedtab())\nvar row = selectedtab() ? currentitem() : -1\nvar formats = itemFormats(row)\nreorderFormats(formats)\n\ncurrentpath(Dir().homePath())\nvar defaultFileName = 'untitled'\n\nvar keyFormat = 'Format'\nvar keyFileName = 'File'\nvar defaultFormat = formats[0]\n\nvar result = dialog(\n  '.title', 'Save Item As...',\n  '.width', 250,\n  keyFormat, [defaultFormat].concat(formats),\n  keyFileName, File(defaultFileName)\n) || abort()\n\nvar fileName = result[keyFileName]\nvar format = result[keyFormat]\n\nif (!format || !fileName)\n  abort()\n\nif (!hasSuffix(fileName))\n  fileName = addSuffix(fileName, format)\n\nvar f = File(fileName)\nif (!f.open()) {\n  popup('Failed to open \"' + f.fileName() + '\"', f.errorString())\n  abort()\n}\n\nf.write(selectedtab() ? getitem(currentitem())[format] : clipboard(format))\npopup(\"Item Saved\", 'Item saved as \"' + f.fileName() + '\".')"
+6\Icon=\xf0c7
+6\InMenu=true
+6\Name=Save As...
+6\Shortcut=ctrl+s
+7\Command=copyq: plugins.itempinned.pin()
+7\Icon=\xf08d
+7\InMenu=true
+7\Input=!OUTPUT
+7\InternalId=copyq_pinned_pin
+7\Name=Pin
+7\Output=application/x-copyq-item-pinned
+8\Command=copyq: plugins.itempinned.unpin()
+8\Icon=\xf08d
+8\InMenu=true
+8\Input=application/x-copyq-item-pinned
+8\InternalId=copyq_pinned_unpin
+8\Name=Unpin
+9\Command=copyq: plugins.itemtags.tag(decodeURIComponent('Important'))
+9\Icon=\xf02b
+9\InMenu=true
+9\InternalId=copyq_tags_tag:Important
+9\MatchCommand=copyq: plugins.itemtags.hasTag(decodeURIComponent('Important')) && fail()
+9\Name=Tag as \x201cImportant\x201d
+size=13

@@ -1,0 +1,161 @@
+# # KDE Breeze (Ported from Konsole)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x232627'
+#     foreground: '0xfcfcfc'
+
+#     dim_foreground: '0xeff0f1'
+#     bright_foreground: '0xffffff'
+#     dim_background: '0x31363b'
+#     bright_background: '0x000000'
+
+#   # Normal colors
+#   normal:
+#     black: '0x232627'
+#     red: '0xed1515'
+#     green: '0x11d116'
+#     yellow: '0xf67400'
+#     blue: '0x1d99f3'
+#     magenta: '0x9b59b6'
+#     cyan: '0x1abc9c'
+#     white: '0xfcfcfc'
+
+#   # Bright colors
+#   bright:
+#     black: '0x7f8c8d'
+#     red: '0xc0392b'
+#     green: '0x1cdc9a'
+#     yellow: '0xfdbc4b'
+#     blue: '0x3daee9'
+#     magenta: '0x8e44ad'
+#     cyan: '0x16a085'
+#     white: '0xffffff'
+
+#   # Dim colors
+#   dim:
+#     black: '0x31363b'
+#     red: '0x783228'
+#     green: '0x17a262'
+#     yellow: '0xb65619'
+#     blue: '0x1b668f'
+#     magenta: '0x614a73'
+#     cyan: '0x186c60'
+#     white: '0x63686d'
+# ----------------------------------------
+# Nightfox Alacritty Colors
+# Style: terafox
+# Upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/terafox/nightfox_alacritty.yml
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x152528'
+#     foreground: '0xe6eaea'
+#   # Normal colors
+#   normal:
+#     black:   '0x2f3239'
+#     red:     '0xe85c51'
+#     green:   '0x7aa4a1'
+#     yellow:  '0xfda47f'
+#     blue:    '0x5a93aa'
+#     magenta: '0xad5c7c'
+#     cyan:    '0xa1cdd8'
+#     white:   '0xebebeb'
+#   # Bright colors
+#   bright:
+#     black:   '0x4e5157'
+#     red:     '0xeb746b'
+#     green:   '0x8eb2af'
+#     yellow:  '0xfdb292'
+#     blue:    '0x73a3b7'
+#     magenta: '0xb97490'
+#     cyan:    '0xafd4de'
+#     white:   '0xeeeeee'
+#   indexed_colors:
+#     - { index: 16, color: '0xff8349' }
+#     - { index: 17, color: '0xcb7985' }
+#--------------------------------------------
+# XTerm's default colors
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xffffff'
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xcd0000'
+    green:   '0x00cd00'
+    yellow:  '0xcdcd00'
+    blue:    '0x0000ee'
+    magenta: '0xcd00cd'
+    cyan:    '0x00cdcd'
+    white:   '0xe5e5e5'
+
+  # Bright colors
+  bright:
+    black:   '0x7f7f7f'
+    red:     '0xff0000'
+    green:   '0x00ff00'
+    yellow:  '0xffff00'
+    blue:    '0x5c5cff'
+    magenta: '0xff00ff'
+    cyan:    '0x00ffff'
+    white:   '0xffffff'
+# 原来tabspaces是8
+tabspaces: 4
+# 字体使用Soure Code Pro
+family: Source Code Pro 
+# 背景不透明度
+window.opacity: 0.86
+live_config_reload: true
+
+font:
+  size: 7.5 
+
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  bold:
+    family: Source Code Pro
+    style: Bold
+
+  italic:
+    family: Source Code Pro
+    style: Italic
+    
+  # Bold italic font face
+  bold_italic:
+  # value specified for the normal font.
+    family: Source Code Pro
+
+  # The `style` can be specified to pick a specific face.
+    style: Bold Italic
+
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+scrolling:
+  # 历史保留行数
+  history: 12000
+
+  # 每次滚动行数
+  multiplier: 20
+
+  # 每次滚动行数（分屏时）
+  faux_multiplier: 20
+
+  # 自动滚动至最新行
+  auto_scroll: false
+
