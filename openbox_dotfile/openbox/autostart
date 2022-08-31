@@ -1,0 +1,16 @@
+feh --bg-fill ~/wallpaper/close-up_drop_black_blue_rain.jpg &
+fcitx5 -d &
+tilda &
+copyq &
+picom -b 
+nm-appplet &
+blueman-applet &
+xfce4-power-manager &
+conky &
+plank &
+dunst -conf ~/.config/dunst/dunstrc &
+libinput-gestures &
+redshift -l 42.3:-71.1 -m randr &
+~/.config/polybar/launch.sh &
+(sleep 15s &&xset s off) &
+(sleep 30s &&xset dpms 0 0 7200) &

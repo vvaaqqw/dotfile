@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+    <menu id="root-menu" label="OpenBox 3">
+        <menu id="1" label="Development">
+            <item label="Electron 13"> <action name="Execute">
+                <execute>electron13</execute>
+            </action> </item>
+            <item label="IDLE (Python IDE)"> <action name="Execute">
+                <execute>idle</execute>
+            </action> </item>
+            <item label="Kate"> <action name="Execute">
+                <execute>kate</execute>
+            </action> </item>
+            <item label="Python"> <action name="Execute">
+                <execute>alacritty -e python</execute>
+            </action> </item>
+            <item label="Qt4 Assistant"> <action name="Execute">
+                <execute>assistant-qt4</execute>
+            </action> </item>
+            <item label="Qt4 Designer"> <action name="Execute">
+                <execute>designer-qt4</execute>
+            </action> </item>
+            <item label="Qt4 Linguist"> <action name="Execute">
+                <execute>linguist-qt4</execute>
+            </action> </item>
+            <item label="Qt4 QDbusViewer"> <action name="Execute">
+                <execute>qdbusviewer-qt4</execute>
+            </action> </item>
+            <item label="UserFeedback Console"> <action name="Execute">
+                <execute>UserFeedbackConsole</execute>
+            </action> </item>
+            <item label="Visual Studio Code"> <action name="Execute">
+                <execute>code</execute>
+            </action> </item>
+        </menu>
+        <menu id="2" label="Editors">
+            <item label="KWrite"> <action name="Execute">
+                <execute>kwrite</execute>
+            </action> </item>
+            <item label="Nano"> <action name="Execute">
+                <execute>alacritty -e nano</execute>
+            </action> </item>
+            <item label="Neovide (nvim)"> <action name="Execute">
+                <execute>neovide</execute>
+            </action> </item>
+            <item label="Neovim"> <action name="Execute">
+                <execute>alacritty -e nvim</execute>
+            </action> </item>
+            <item label="Vim"> <action name="Execute">
+                <execute>alacritty -e vim</execute>
+            </action> </item>
+        </menu>
+        <menu id="18" label="Games">
+            <menu id="9" label="Adventure">
+                <item label="Sclient"> <action name="Execute">
+                    <execute>sclient</execute>
+                </action> </item>
+            </menu>
+            <menu id="10" label="Arcade">
+                <item label="PacMan"> <action name="Execute">
+                    <execute>pacman</execute>
+                </action> </item>
+            </menu>
+        </menu>
+        <menu id="6" label="Graphics">
+            <item label="Flameshot"> <action name="Execute">
+                <execute>flameshot</execute>
+            </action> </item>
+            <item label="GNU Image Manipulation Program"> <action name="Execute">
+                <execute>gimp-2.10</execute>
+            </action> </item>
+            <item label="Pinta"> <action name="Execute">
+                <execute>pinta</execute>
+            </action> </item>
+            <item label="The GIMP"> <action name="Execute">
+                <execute>gimp</execute>
+            </action> </item>
+            <item label="XDvi"> <action name="Execute">
+                <execute>xdvi</execute>
+            </action> </item>
+            <item label="XGlyph"> <action name="Execute">
+                <execute>xglyph</execute>
+            </action> </item>
+        </menu>
+        <menu id="7" label="Multimedia">
+            <item label="ALSA mixer"> <action name="Execute">
+                <execute>alacritty -e alsamixer</execute>
+            </action> </item>
+            <item label="Calf Plugin Pack for JACK"> <action name="Execute">
+                <execute>calfjackhost</execute>
+            </action> </item>
+            <item label="EasyEffects"> <action name="Execute">
+                <execute>easyeffects</execute>
+            </action> </item>
+            <item label="MediaInfo"> <action name="Execute">
+                <execute>mediainfo-gui</execute>
+            </action> </item>
+            <item label="mpv Media Player"> <action name="Execute">
+                <execute>mpv --player-operation-mode=pseudo-gui</execute>
+            </action> </item>
+            <item label="Qt V4L2 test Utility"> <action name="Execute">
+                <execute>qv4l2</execute>
+            </action> </item>
+            <item label="Qt V4L2 video capture utility"> <action name="Execute">
+                <execute>qvidcap</execute>
+            </action> </item>
+            <item label="VLC media player"> <action name="Execute">
+                <execute>vlc</execute>
+            </action> </item>
+            <item label="VLC media player"> <action name="Execute">
+                <execute>qvlc</execute>
+            </action> </item>
+            <item label="YesPlayMusic OSD"> <action name="Execute">
+                <execute>yesplaymusic</execute>
+            </action> </item>
+        </menu>
+        <menu id="5" label="Network">
+            <item label="Avahi SSH Server Browser"> <action name="Execute">
+                <execute>bssh</execute>
+            </action> </item>
+            <item label="Avahi VNC Server Browser"> <action name="Execute">
+                <execute>bvnc</execute>
+            </action> </item>
+            <item label="baidunetdisk"> <action name="Execute">
+                <execute>baidunetdisk</execute>
+            </action> </item>
+            <item label="FireFox"> <action name="Execute">
+                <execute>firefox</execute>
+            </action> </item>
+            <item label="LibreWolf"> <action name="Execute">
+                <execute>/usr/lib/librewolf/librewolf</execute>
+            </action> </item>
+            <item label="Lynx"> <action name="Execute">
+                <execute>alacritty -e lynx</execute>
+            </action> </item>
+            <item label="Private Internet Access"> <action name="Execute">
+                <execute>/opt/piavpn/bin/pia-client</execute>
+            </action> </item>
+            <item label="Steam (Runtime)"> <action name="Execute">
+                <execute>steam-runtime</execute>
+            </action> </item>
+            <item label="Thunderbird"> <action name="Execute">
+                <execute>thunderbird</execute>
+            </action> </item>
+            <item label="TkVNC"> <action name="Execute">
+                <execute>xterm -e tkvnc</execute>
+            </action> </item>
+            <item label="Transmission"> <action name="Execute">
+                <execute>transmission-gtk</execute>
+            </action> </item>
+            <item label="Zoom"> <action name="Execute">
+                <execute>zoom</execute>
+            </action> </item>
+        </menu>
+        <menu id="3" label="Office">
+            <item label="Calibre"> <action name="Execute">
+                <execute>calibre</execute>
+            </action> </item>
+            <item label="E-book editor"> <action name="Execute">
+                <execute>ebook-edit</execute>
+            </action> </item>
+            <item label="E-book viewer"> <action name="Execute">
+                <execute>ebook-viewer</execute>
+            </action> </item>
+            <item label="LRF viewer"> <action name="Execute">
+                <execute>lrfviewer</execute>
+            </action> </item>
+            <item label="Okular"> <action name="Execute">
+                <execute>okular</execute>
+            </action> </item>
+            <item label="WPS PDF"> <action name="Execute">
+                <execute>wpspdf</execute>
+            </action> </item>
+            <item label="WPS Presentation"> <action name="Execute">
+                <execute>wpp</execute>
+            </action> </item>
+            <item label="WPS Spreadsheets"> <action name="Execute">
+                <execute>et</execute>
+            </action> </item>
+            <item label="WPS Writer"> <action name="Execute">
+                <execute>wps</execute>
+            </action> </item>
+            <item label="Xournal++"> <action name="Execute">
+                <execute>xournalpp</execute>
+            </action> </item>
+        </menu>
+        <menu id="4" label="Science">
+            <item label="bc"> <action name="Execute">
+                <execute>alacritty -e bc</execute>
+            </action> </item>
+            <item label="dc"> <action name="Execute">
+                <execute>alacritty -e dc</execute>
+            </action> </item>
+            <item label="R"> <action name="Execute">
+                <execute>alacritty -e R</execute>
+            </action> </item>
+        </menu>
+        <menu id="19" label="Shells">
+            <item label="Alacritty"> <action name="Execute">
+                <execute>alacritty</execute>
+            </action> </item>
+            <item label="Dolphin"> <action name="Execute">
+                <execute>dolphin</execute>
+            </action> </item>
+            <item label="GIT"> <action name="Execute">
+                <execute>alacritty -e git</execute>
+            </action> </item>
+            <item label="ranger"> <action name="Execute">
+                <execute>alacritty -e ranger</execute>
+            </action> </item>
+            <item label="Tilda"> <action name="Execute">
+                <execute>tilda</execute>
+            </action> </item>
+            <item label="UXTerm"> <action name="Execute">
+                <execute>uxterm</execute>
+            </action> </item>
+            <item label="Xterm"> <action name="Execute">
+                <execute>xterm</execute>
+            </action> </item>
+        </menu>
+        <menu id="37" label="System">
+            <menu id="36" label="Settings">
+                <menu id="21" label="GNOME">
+                    <item label="Advanced Network Configuration"> <action name="Execute">
+                        <execute>nm-connection-editor</execute>
+                    </action> </item>
+                    <item label="Bluetooth Manager"> <action name="Execute">
+                        <execute>blueman-manager</execute>
+                    </action> </item>
+                </menu>
+                <menu id="35" label="Xfce">
+                    <item label="Bluetooth Adapters"> <action name="Execute">
+                        <execute>blueman-adapters</execute>
+                    </action> </item>
+                </menu>
+                <item label="ARandR"> <action name="Execute">
+                    <execute>arandr</execute>
+                </action> </item>
+                <item label="Customize Look and Feel"> <action name="Execute">
+                    <execute>lxappearance</execute>
+                </action> </item>
+                <item label="Fcitx 5 Configuration"> <action name="Execute">
+                    <execute>fcitx5-configtool</execute>
+                </action> </item>
+                <item label="Fcitx 5 Migration Wizard"> <action name="Execute">
+                    <execute>fcitx5-migrator</execute>
+                </action> </item>
+                <item label="IBus Preferences"> <action name="Execute">
+                    <execute>ibus-setup</execute>
+                </action> </item>
+                <item label="Kvantum Manager"> <action name="Execute">
+                    <execute>kvantummanager</execute>
+                </action> </item>
+                <item label="Manage Printing"> <action name="Execute">
+                    <execute>xdg-open http://localhost:631/</execute>
+                </action> </item>
+                <item label="Notifications"> <action name="Execute">
+                    <execute>xfce4-notifyd-config</execute>
+                </action> </item>
+                <item label="Openbox Configuration Manager"> <action name="Execute">
+                    <execute>obconf</execute>
+                </action> </item>
+                <item label="Passwords and Keys"> <action name="Execute">
+                    <execute>seahorse</execute>
+                </action> </item>
+                <item label="Power Manager"> <action name="Execute">
+                    <execute>xfce4-power-manager-settings</execute>
+                </action> </item>
+                <item label="Qt5 Settings"> <action name="Execute">
+                    <execute>qt5ct</execute>
+                </action> </item>
+            </menu>
+            <item label="Avahi Zeroconf Browser"> <action name="Execute">
+                <execute>avahi-discover</execute>
+            </action> </item>
+            <item label="BleachBit"> <action name="Execute">
+                <execute>bleachbit</execute>
+            </action> </item>
+            <item label="conky"> <action name="Execute">
+                <execute>conky --daemonize --pause=1</execute>
+            </action> </item>
+            <item label="Conky"> <action name="Execute">
+                <execute>alacritty -e conky</execute>
+            </action> </item>
+            <item label="Fcitx 5"> <action name="Execute">
+                <execute>fcitx5</execute>
+            </action> </item>
+            <item label="fish"> <action name="Execute">
+                <execute>alacritty -e fish</execute>
+            </action> </item>
+            <item label="Hardware Locality lstopo"> <action name="Execute">
+                <execute>lstopo</execute>
+            </action> </item>
+            <item label="Htop"> <action name="Execute">
+                <execute>alacritty -e htop</execute>
+            </action> </item>
+            <item label="KeePassXC"> <action name="Execute">
+                <execute>keepassxc</execute>
+            </action> </item>
+            <item label="pstree"> <action name="Execute">
+                <execute>alacritty -e pstree.x11</execute>
+            </action> </item>
+            <item label="pstree"> <action name="Execute">
+                <execute>xterm -e /usr/bin/pstree.x11</execute>
+            </action> </item>
+            <item label="pstree"> <action name="Execute">
+                <execute>alacritty -e pstree</execute>
+            </action> </item>
+            <item label="TeXconfig"> <action name="Execute">
+                <execute>alacritty -e texconfig</execute>
+            </action> </item>
+            <item label="Timeshift"> <action name="Execute">
+                <execute>timeshift-launcher</execute>
+            </action> </item>
+            <item label="Top"> <action name="Execute">
+                <execute>alacritty -e top</execute>
+            </action> </item>
+        </menu>
+        <menu id="38" label="Utilities">
+            <item label="About Xfce"> <action name="Execute">
+                <execute>xfce4-about</execute>
+            </action> </item>
+            <item label="Archive Manager"> <action name="Execute">
+                <execute>file-roller</execute>
+            </action> </item>
+            <item label="CopyQ"> <action name="Execute">
+                <execute>copyq --start-server show</execute>
+            </action> </item>
+            <item label="Filelight"> <action name="Execute">
+                <execute>filelight</execute>
+            </action> </item>
+            <item label="Gestures"> <action name="Execute">
+                <execute>gestures</execute>
+            </action> </item>
+            <item label="Info"> <action name="Execute">
+                <execute>alacritty -e info</execute>
+            </action> </item>
+            <item label="Keyboard layout viewer"> <action name="Execute">
+                <execute>kbd-layout-viewer5</execute>
+            </action> </item>
+            <item label="picom"> <action name="Execute">
+                <execute>picom</execute>
+            </action> </item>
+            <item label="Redshift"> <action name="Execute">
+                <execute>redshift-gtk</execute>
+            </action> </item>
+            <item label="TeXdoctk"> <action name="Execute">
+                <execute>texdoctk</execute>
+            </action> </item>
+            <item label="Warpinator"> <action name="Execute">
+                <execute>warpinator</execute>
+            </action> </item>
+            <item label="Wordview"> <action name="Execute">
+                <execute>wordview</execute>
+            </action> </item>
+            <item label="Xev"> <action name="Execute">
+                <execute>alacritty -e xev</execute>
+            </action> </item>
+        </menu>
+        <separator/>
+        <menu id="40" label="OpenBox">
+            <menu id="client-list-menu"/>
+            <item label="Reconfigure"> <action name="Reconfigure"/> </item>
+            <separator/>
+            <item label="Exit"> <action name="Exit"/> </item>
+        </menu>
+    </menu>
+</openbox_menu>
