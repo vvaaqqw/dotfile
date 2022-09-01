@@ -179,17 +179,18 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- brightness controls -->
-    <!-- don't need this if has xfce4-power-manager -->
-    <!-- <keybind key="XF86MonBrightnessUp"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>bash -c 'brightnessctl set +5% ; ~/.scripts/get-brightness'</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="XF86MonBrightnessDown"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>bash -c 'brightnessctl set 5%- ; ~/.scripts/get-brightness'</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
+    <!-- need to create user group video, and add user to group video, then modify udev rules. -->
+    <!-- see archwiki backlight -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight -inc 5</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -dec 5</command>
+      </action>
+    </keybind>
     <!-- volume control -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
