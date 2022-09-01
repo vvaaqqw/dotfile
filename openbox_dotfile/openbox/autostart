@@ -5,7 +5,6 @@ copyq &
 picom -b 
 nm-appplet &
 blueman-applet &
-xfce4-power-manager &
 conky &
 plank &
 dunst -conf ~/.config/dunst/dunstrc &
