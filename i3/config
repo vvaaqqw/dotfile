@@ -219,6 +219,8 @@ exec_always --no-startup-id libinput-gestures
 exec --no-startup-id redshift -l 42.3:-71.1 -m randr
 
 #brightness
+#<!-- need to create user group video, and add user to group video, then modify udev rules. -->
+#<!-- see archwiki backlight -->
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
