@@ -1,4 +1,5 @@
 acpi_call
+acpilight
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 alacritty
@@ -75,6 +76,7 @@ gpick
 grep
 groff
 grub-btrfs
+gsimplecal
 gst-plugin-pipewire
 gtk-engine-murrine
 gtk-engines
@@ -148,6 +150,7 @@ pipewire-pulse
 pkgconf
 plank
 playerctl
+pnmixer
 polybar
 powerline-fonts
 pulsemixer
@@ -189,6 +192,7 @@ ttf-hack
 ttf-ms-fonts
 ttf-unifont
 ttf-wps-fonts
+udiskie
 ueberzug
 unace
 unrar
@@ -210,7 +214,6 @@ wqy-zenhei
 xclip
 xdg-utils-mimeo
 xdotool
-xfce4-power-manager
 xorg-server
 xorg-xev
 xorg-xinit
