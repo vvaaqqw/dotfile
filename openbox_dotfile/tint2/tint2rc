@@ -204,7 +204,7 @@ tooltip_font = Droid Sans Bold 8
 # Executor 1
 execp = new
 execp_command = ~/.config/tint2/checkupdate/updates-pacman-aurhelper.sh
-execp_interval = 1
+execp_interval = 3600
 execp_has_icon = 0
 execp_cache_icon = 0
 execp_continuous = 0
