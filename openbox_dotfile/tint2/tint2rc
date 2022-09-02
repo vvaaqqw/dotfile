@@ -55,7 +55,7 @@ border_color_pressed = #000000 0
 
 #-------------------------------------
 # Panel
-panel_items = CBTS
+panel_items = CBETS
 panel_size = 100% 24
 panel_margin = 0 0
 panel_padding = 0 0 0
@@ -73,7 +73,7 @@ autohide_height = 1
 strut_policy = follow_size
 panel_window_name = tint2
 disable_transparency = 0
-mouse_effects = 1
+mouse_effects = 0
 font_shadow = 0
 mouse_hover_icon_asb = 100 0 10
 mouse_pressed_icon_asb = 100 0 0
@@ -81,7 +81,7 @@ mouse_pressed_icon_asb = 100 0 0
 #-------------------------------------
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 0 0 0
+taskbar_padding = 3 3 3
 taskbar_background_id = 0
 taskbar_active_background_id = 1
 taskbar_name = 1
@@ -145,7 +145,8 @@ mouse_scroll_down = none
 
 #-------------------------------------
 # Clock
-time1_format = %a, %b %d, %Y   %l:%M%p
+#time1_format = %a, %b %d, %Y   %l:%M%p
+time1_format = %a, %l:%M%p
 time2_format = 
 time1_font = Droid Sans Bold 8
 time1_timezone = 
@@ -192,13 +193,35 @@ systray_monitor = 1
 
 #-------------------------------------
 # Tooltip
-tooltip_show_timeout = 1
+tooltip_show_timeout = 0
 tooltip_hide_timeout = 0
 tooltip_padding = 6 6
 tooltip_background_id = 1
 tooltip_font_color = #d1d1d1 100
 tooltip_font = Droid Sans Bold 8
 
+#-------------------------------------
+# Executor 1
+execp = new
+execp_command = ~/.config/tint2/checkupdate/updates-pacman-aurhelper.sh
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 0
+execp_continuous = 0
+execp_markup = 0
+execp_tooltip = 
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Sans 8.5
+execp_font_color = #f9f9f9 100
+execp_padding = 3 0
+execp_background_id = 1
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
 
 
 # End of config
