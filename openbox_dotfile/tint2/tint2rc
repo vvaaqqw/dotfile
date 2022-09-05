@@ -26,8 +26,8 @@ border_color_pressed = #272727 0
 # Background 3: Urgent task
 rounded = 0
 border_width = 0
-background_color = #d98282 60
-border_color = #d98282 0
+background_color = #888888 20
+border_color = #ED2323 60
 background_color_hover = #d98282 60
 border_color_hover = #d98282 0
 background_color_pressed = #d98282 60
@@ -128,14 +128,14 @@ mouse_scroll_down = none
 
 #-------------------------------------
 # Launcher
-#launcher_padding = 000000
-#launcher_background_id = 1
-#launcher_icon_background_id = 0
-#launcher_icon_size = 16
-#launcher_icon_asb = 100 0 0
-#startup_notifications = 0
-#launcher_tooltip = 0
-#launcher_icon_theme  = Breeze-Dark
+launcher_padding = 000000
+launcher_background_id = 1
+launcher_icon_background_id = 0
+launcher_icon_size = 16
+launcher_icon_asb = 100 0 0
+startup_notifications = 0
+launcher_tooltip = 0
+launcher_icon_theme  = Papirus
 #
 #launcher_item_app = ~/.config/tint2/launchers/obmenu-launch.desktop
 #launcher_item_app = ~/.config/tint2/launchers/pcmanfm.desktop
