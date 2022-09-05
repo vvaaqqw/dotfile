@@ -274,6 +274,18 @@
     <keybind key="C-A-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+    <!-- Keybindings for switching to the urgent window-->
+    <keybind key="W-n">
+        <action name="ForEach">
+    <query target="default">
+      <urgent>yes</urgent>
+    </query>
+    <then>
+      <action name="Raise"/>
+      <action name="Focus"/>
+    </then>
+  </action>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -1333,8 +1345,8 @@
       <desktop>9</desktop>
     </application>
 <!-- put yesplaymusic in window 4 -->
- <application class="yesplaymusic">
-      <desktop>4</desktop>
-    </application>
+ <!-- <application class="yesplaymusic"> -->
+ <!--      <desktop>4</desktop> -->
+ <!--    </application> -->
   </applications>
 </openbox_config>
