@@ -4,7 +4,6 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 alacritty
 alsa-utils
-anaconda
 android-sdk-platform-tools
 arandr
 archlinux-keyring
@@ -17,7 +16,7 @@ automake
 autotiling-git
 avr-gcc
 avr-libc
-baidunetdisk-electron
+baidunetdisk-bin
 base
 betterlockscreen
 binutils
@@ -171,6 +170,7 @@ siji-ttf
 smartmontools
 sof-firmware
 squashfs-tools
+ssfconv
 steam
 sudo
 texinfo
@@ -192,10 +192,12 @@ tlp-rdw
 tp_smapi
 transmission-cli
 transmission-gtk
+trash-cli
 ttf-font-awesome
 ttf-hack
 ttf-icomoon-feather
 ttf-unifont
+udiskie
 ueberzug
 unace
 unrar
