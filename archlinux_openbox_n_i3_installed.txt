@@ -14,7 +14,7 @@ atool
 autoconf
 automake
 autotiling-git
-baidunetdisk-electron
+baidunetdisk-bin
 base
 betterlockscreen
 binutils
@@ -32,8 +32,8 @@ conky
 copyq
 ctags
 cups
-deepin-wine-wechat
 dex
+dialog
 dmenu
 dolphin
 dragon-drop
@@ -123,6 +123,7 @@ neovide-git
 neovim
 nerd-fonts-source-code-pro
 net-tools
+netctl
 network-manager-applet
 networkmanager
 noto-fonts
@@ -161,7 +162,7 @@ python-websockets
 qt5ct
 r
 radian
-ranger-git
+ranger
 redshift
 rime-double-pinyin
 rime-emoji
@@ -172,6 +173,7 @@ sed
 siji-ttf
 smartmontools
 squashfs-tools
+ssfconv
 steam
 sudo
 texinfo
@@ -187,6 +189,7 @@ tlp-rdw
 tp_smapi
 transmission-cli
 transmission-gtk
+trash-cli
 ttf-font-awesome
 ttf-hack
 ttf-ms-fonts
@@ -195,11 +198,13 @@ ttf-wps-fonts
 udiskie
 ueberzug
 unace
+ungoogled-chromium
 unrar
 vim
 visual-studio-code-bin
 vulkan-intel
 warpinator
+wechat-uos
 wget
 which
 wireless_tools
