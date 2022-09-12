@@ -198,6 +198,7 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -
 exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
+exec --no-startup-id udiskie -s
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id copyq
 # clipboard manager
@@ -219,8 +220,6 @@ exec_always --no-startup-id libinput-gestures
 exec --no-startup-id redshift -l 42.3:-71.1 -m randr
 
 #brightness
-#<!-- need to create user group video, and add user to group video, then modify udev rules. -->
-#<!-- see archwiki backlight -->
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
@@ -263,7 +262,8 @@ bindsym $mod+x kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi drun,ssh -show combi -icon-theme 'Papirus' -show-icons"
-bindsym $mod+w exec --no-startup-id "rofi -combi-modi window,ssh -show combi -icon-theme 'Papirus' -show-icons"
+bindsym $mod+Shift+w exec --no-startup-id "rofi -combi-modi window,ssh -show combi -icon-theme 'Papirus' -show-icons"
+bindsym $mod+w exec --no-startup-id "wmfocus --textcolor black --bgcolor cyan --textcolorcurrent cyan --bgcolorcurrent black -f Hack:90"
 #bindsym $mod+p exec --no-startup-id rofi -show p -modi p:rofi-power-menu -width 20 -lines 6
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
