@@ -100,7 +100,7 @@ libusb-compat
 libva-intel-driver
 lightdm
 lightdm-gtk-greeter
-lightdm-webkit2-greeter
+lightdm-gtk-greeter-settings
 linux
 linux-firmware
 linux-zen
@@ -130,6 +130,7 @@ noto-fonts
 npm
 nutstore
 nvim-packer-git
+obs-studio
 odt2txt
 okular
 pacman
@@ -164,6 +165,7 @@ rime-double-pinyin
 rime-emoji
 ripgrep
 rofi
+rustup
 seahorse
 sed
 siji-ttf
@@ -180,6 +182,7 @@ texlive-latexextra
 texlive-local-ctex
 texlive-local-fontawesome5
 texlive-local-fontspec
+texlive-local-pgfplots
 texlive-local-zhnumber
 the_silver_searcher
 thunderbird
@@ -207,6 +210,7 @@ vscodium-bin
 vulkan-intel
 warpinator
 wechat-uos
+wemeet-bin
 wget
 which
 wireless_tools
@@ -230,7 +234,7 @@ xss-lock
 xterm
 xwinwrap-git
 yay
-yesplaymusicosd-electron-git
+yesplaymusic
 yt-dlp
 zoom
 zram-generator
