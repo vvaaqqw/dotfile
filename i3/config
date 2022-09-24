@@ -454,6 +454,9 @@ bindsym $mod+r mode "resize"
 # force floating for all new windows!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #for_window [class="[.]*"] floating enable
 
+#hide titlebar
+for_window [class="^.*"] border pixel 1
+
 # browser pop-ups
 for_window [window_role="pop-up"] floating enable
 # task dialog 
