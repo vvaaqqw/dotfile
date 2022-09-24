@@ -101,8 +101,7 @@ libtool
 libva-intel-driver
 lightdm
 lightdm-gtk-greeter
-lightdm-webkit-theme-aether
-lightdm-webkit2-greeter
+lightdm-gtk-greeter-settings
 linux
 linux-firmware
 linux-zen
