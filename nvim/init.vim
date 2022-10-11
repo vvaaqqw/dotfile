@@ -1,5 +1,6 @@
-let g:everforest_background = 'hard'
+" let g:everforest_background = 'hard'
 colorscheme 2077
+set termguicolors
 set guifont=:Hack\ Nerd\ font:h7.5
 set hidden                  " to use terminal plugin: toggleterm.nvim
 set nocompatible            " disable compatibility to old-time vi
