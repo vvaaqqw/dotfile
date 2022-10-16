@@ -46,6 +46,7 @@ efibootmgr
 epub-thumbnailer-git
 ethtool
 fakeroot
+falkon
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -53,6 +54,7 @@ fcitx5-nord
 fcitx5-qt
 fcitx5-rime
 fcitx5-skin-simple-blue
+fd
 feh
 ffmpegthumbnailer
 file
@@ -122,7 +124,6 @@ neofetch
 neovide-git
 neovim
 nerd-fonts-hack
-nerd-fonts-source-code-pro
 net-tools
 network-manager-applet
 networkmanager
@@ -133,6 +134,7 @@ nvim-packer-git
 obs-studio
 odt2txt
 okular
+osdlyrics
 pacman
 pacman-contrib
 pandoc-bin
@@ -150,10 +152,12 @@ pipewire-v4l2
 pipewire-zeroconf
 pkgconf
 playerctl
+pnglatex-git
 polybar
 powerline-fonts
 python-pip
 python-prompt_toolkit
+python-pycurl
 python-pynvim
 python-websockets
 qt5ct
@@ -199,6 +203,7 @@ trash-cli
 ttf-font-awesome
 ttf-hack
 ttf-icomoon-feather
+ttf-sourcecodepro-nerd
 ttf-unifont
 udiskie
 ueberzug
@@ -234,7 +239,7 @@ xss-lock
 xterm
 xwinwrap-git
 yay
-yesplaymusic
+yesplaymusicosd-git
 yt-dlp
 zoom
 zram-generator
