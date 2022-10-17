@@ -72,6 +72,13 @@ return require("packer").startup {
                 'kyazdani42/nvim-web-devicons', -- optional, for file icon
             },
         }
+        -- notify
+        use 'rcarriga/nvim-notify'
+        -- ipynb
+        use 'bfredl/nvim-ipy'
+        use 'GCBallesteros/jupytext.vim'
+        use 'kana/vim-textobj-user'
+        use 'GCBallesteros/vim-textobj-hydrogen'
         -- bufferline
         use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
         -- treesitter 高亮插件
@@ -125,7 +132,7 @@ return require("packer").startup {
         use { 'tpope/vim-commentary' }
         use {
             'phaazon/hop.nvim',
-            branch = 'v1', -- optional but strongly recommended
+            branch = 'v2', -- optional but strongly recommended
             config = function()
                 -- you can configure Hop the way you like here; see :h hop-config
                 require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
@@ -147,12 +154,13 @@ return require("packer").startup {
         }
         require('telescope').load_extension('projects')
 
-        -- use "Pocco81/DAPInstall.nvim" --
-        -- use 'mfussenegger/nvim-dap'
-        -- use 'nvim-telescope/telescope-dap.nvim'
-        -- require('telescope').load_extension('dap')
-        -- use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } } --
-        -- use 'theHamsta/nvim-dap-virtual-text'
+        use "Pocco81/DAPInstall.nvim" --
+        use 'mfussenegger/nvim-dap'
+        use 'nvim-telescope/telescope-dap.nvim'
+        require('telescope').load_extension('dap')
+        use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } } --
+        use 'theHamsta/nvim-dap-virtual-text'
+        use 'jbyuki/one-small-step-for-vimkind' -- lua dap
         use 'nacro90/numb.nvim'
         use 'andymass/vim-matchup'
         require('numb').setup()
@@ -167,13 +175,32 @@ return require("packer").startup {
         use "ray-x/lsp_signature.nvim" -- show function signature when typing
         use 'ethanholz/nvim-lastplace'
         -- cmp plugins
-        use {
-            "hrsh7th/nvim-cmp",
-        } -- The completion plugin
         use "hrsh7th/cmp-buffer" -- buffer completions
         use "hrsh7th/cmp-path" -- path completions
         use "hrsh7th/cmp-cmdline" -- cmdline completions
-        use "saadparwaiz1/cmp_luasnip" -- snippet completions
+        -- nvim-cmp+snippet
+        use { 'L3MON4D3/LuaSnip' }
+        use {
+            'hrsh7th/nvim-cmp',
+            config = function()
+                require 'cmp'.setup {
+                    snippet = {
+                        expand = function(args)
+                            require 'luasnip'.lsp_expand(args.body)
+                        end
+                    },
+
+                    sources = {
+                        { name = 'luasnip' },
+                        -- more sources
+                    },
+                }
+            end
+        }
+        use { 'saadparwaiz1/cmp_luasnip' }
+        -- snippets
+        use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+        -- ---------------------------
         use "hrsh7th/cmp-nvim-lsp"
         use "hrsh7th/cmp-nvim-lua"
         -- use "quangnguyen30192/cmp-nvim-tags"
@@ -186,16 +213,13 @@ return require("packer").startup {
         --   after = "nvim-cmp",
         --   run = 'bash ./install.sh',
         -- }
-        -- snippets
-        use "L3MON4D3/LuaSnip" --snippet engine
-        use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
         -- autosession
         use {
             'rmagatti/auto-session',
             config = function()
                 require('auto-session').setup {
                     log_level = 'info',
-                    auto_session_suppress_dirs = {'~/', '~/Projects'}
+                    auto_session_suppress_dirs = { '~/', '~/Projects' }
                 }
             end
         }

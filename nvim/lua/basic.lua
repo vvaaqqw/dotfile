@@ -72,12 +72,6 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
 vim.o.showtabline = 2 --show tabline
--- dashboard header config
-vim.g.dashboard_preview_command = 'cat'
-vim.g.dashboard_preview_pipeline = 'lolcat'
-vim.g.dashboard_preview_file = "/home/spectre/.config/nvim/dragon_logo"
-vim.g.dashboard_preview_file_height = 22
-vim.g.dashboard_preview_file_width = 80
 -- -- minimap
 -- vim.g.minimap_width = 2
 -- vim.g.minimap_auto_start = 1

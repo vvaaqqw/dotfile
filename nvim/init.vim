@@ -1,6 +1,7 @@
 " let g:everforest_background = 'hard'
-colorscheme 2077
+colorscheme carbonfox
 set termguicolors
+" set background=dark
 set guifont=:Hack\ Nerd\ font:h7.5
 set hidden                  " to use terminal plugin: toggleterm.nvim
 set nocompatible            " disable compatibility to old-time vi
@@ -26,7 +27,7 @@ nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 " ----------------------------------
 noremap J 5j
-noremap K 5k
+" noremap K 5k
 noremap H 5h
 noremap L 5l
 noremap t o<Esc>k
@@ -45,19 +46,9 @@ set guicursor+=i:block-Cursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
 " ----------------------------------
-" bufferline keymap
-" These commands will navigate through buffers in order regardless of which mode you are using
-" e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
-nnoremap <silent>]p :BufferLineCycleNext<CR>
-nnoremap <silent>[p :BufferLineCyclePrev<CR>
-
-" These commands will move the current buffer backwards or forwards in the bufferline
-nnoremap <silent>{p :BufferLineMoveNext<CR>
-nnoremap <silent>}p :BufferLineMovePrev<CR>
-
-" These commands will sort buffers by directory, language, or a custom criteria
-" nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
-
+"  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+"  set which python to use 
+let g:python3_host_prog = '/home/spectre/anaconda3/bin/python'
 " ----------------------------------
 " smart edit by suda.vim
 let g:suda_smart_edit = 1
@@ -71,6 +62,7 @@ lua require('plugin-config/bufferline')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/lualine')
 lua require('plugin-config/nvim-treesitter')
+lua require('plugin-config/notify')
 lua require'colorizer'.setup()
 lua require('plugin-config/nvim-ts-rainbow')
 lua require('plugin-config/nvim-gps')
@@ -80,13 +72,15 @@ lua require('plugin-config/autopairs')
 lua require('plugin-config/indent-blankline')
 lua require('scrollbar').setup()
 lua require('plugin-config/nvim-web-devicons')
-" lua require('plugin-config/dapui')
-" lua require('plugin-config/dap-virtual-text')
+lua require('plugin-config/dap')
+lua require('plugin-config/dapui')
+lua require('plugin-config/dap-virtual-text')
 lua require('plugin-config/colorizer')
 lua require('plugin-config/lsp-installer')
 lua require('plugin-config/nvim-lightbulb')
 lua require('plugin-config/cmp')
 lua require('plugin-config/autosession')
+lua require('plugin-config/dashboard')
 
 " ----------------------------------
 " lua require('dap-debugger-config/python')
@@ -110,13 +104,7 @@ let g:neovide_cursor_vfx_mode = "pixiedust"
 " set time interval to 200 ms
 let g:better_escape_interval = 200
 " non-ASCII shortcuts are also supported for non-English keyboard.
-let g:better_escape_shortcut = ['jk', 'jj', 'kj']
-" ----------------------------------
-" telesope keymap
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+let g:better_escape_shortcut = ['jk', 'jj']
 " ----------------------------------
 " wilder.vim config
 call wilder#setup({'modes': [':', '/', '?']})
@@ -146,28 +134,6 @@ call wilder#set_option('renderer', wilder#renderer_mux({
       \   'highlighter': s:highlighters,
       \ }),
       \ }))
-" ----------------------------------
-" dashboard-nvim config
-" Default value is clap
-let g:dashboard_default_executive ='telescope'
-nmap <Leader>ss :<C-u>SessionSave<CR>
-nmap <Leader>sl :<C-u>SessionLoad<CR>
-nnoremap <silent> <Leader>fH :DashboardFindHistory<CR>
-nnoremap <silent> <Leader>tc :DashboardChangeColorscheme<CR>
-nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
-nnoremap <silent> <Leader>fB :DashboardJumpMark<CR>
-nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
-" Disable the plugin while in dashboard
-let g:indentLine_fileTypeExclude = ['dashboard']
-" disable the tabline in dashboard buffer
-autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
-" minimap config
-" let g:minimap_width = 10
-" let g:minimap_auto_start = 1
-" let g:minimap_auto_start_win_enter = 1
-" ----------------------------------
-"  undotree config
-nnoremap <silent> <Leader>fu :UndotreeToggle<CR>
 " ----------------------------------
 " vista config
 " How each level is indented and what to prepend.
@@ -209,7 +175,31 @@ let g:vista#renderer#icons = {
 \  }
 " Do not echo message on command line
 let g:vista_echo_cursor = 0
-" keymap for vista
-nnoremap <silent> <leader>v :Vista!!<CR>
 " ----------------------------------
+" dashboard-nvim config
+" Default value is clap
+let g:dashboard_default_executive ='telescope'
+nnoremap <silent> <Leader>fH :DashboardFindHistory<CR>
+nnoremap <silent> <Leader>tc :DashboardChangeColorscheme<CR>
+nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
+nnoremap <silent> <Leader>fB :DashboardJumpMark<CR>
+nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
+" Disable the plugin while in dashboard
+let g:indentLine_fileTypeExclude = ['dashboard']
+" disable the tabline in dashboard buffer
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+" minimap config
+" let g:minimap_width = 10
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
+" ----------------------------------
+" nvim-ipy keymap 
+let g:nvim_ipy_perform_mappings = 0
+map <silent> <Leader>jr <Plug>(IPy-Run)
+map <silent> <Leader>jc <Plug>(IPy-RunCell)
+map <silent> <Leader>ja <Plug>(IPy-RunAll)
+map <silent> <Leader>j? <Plug>(IPy-WordObjInfo)
+map <silent> <Leader>jx <Plug>(IPy-Terminate)
+" close all matplotlib plot
+nnoremap <Leader>jc :call IPyRun('close("all")',1)<cr>
 " ----------------------------------
