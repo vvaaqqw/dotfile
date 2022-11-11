@@ -9,7 +9,9 @@
 #gaps inner|outer|horizontal|vertical|top|right|bottom|left current|all set|plus|minus|toggle <px>
 
 gaps inner 7
-gaps outer 0
+gaps outer 280
+gaps top 3
+gaps bottom 3
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
@@ -17,10 +19,10 @@ smart_gaps on
 # Only enable outer gaps when there is exactly one container
 smart_gaps inverse_outer
 # Activate smart borders (always)
-smart_borders on
+# smart_borders on
 
 # Activate smart borders (only when there are effectively no gaps)
-smart_borders no_gaps
+# smart_borders no_gaps
 
 # Hide edge borders only if there is one window with no gaps
 hide_edge_borders smart_no_gaps
@@ -164,7 +166,7 @@ default_floating_border pixel 1
 
 
 # Hide borders
-hide_edge_borders none
+# hide_edge_borders none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -565,14 +567,14 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #}
 ## floating windows
 #floating_maximum_size 1280 x 720
-## Theme colors
-## class                 border  bground text    indicator child_border
-#client.focused          #3EB2FF #38F2F2 #000000 #3EB2FF   #3EB2FF
-#client.focused_inactive #333333 #359793 #FFFFFF #D2D2D2   #5F676A
-#client.unfocused        #333333 #434343 #D2D2D2 #292D2E   #222222
-#client.urgent           #00FFF7 #FF04EE #FFFFFF #900000   #900000
-#client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-#client.background       #000000
+# Theme colors
+# class                 border  bground text    indicator child_border
+client.focused          #00E5E5 #38F2F2 #000000 #3EB2FF   #3EB2FF
+client.focused_inactive #000000 #359793 #FFFFFF #D2D2D2   #5F676A
+client.unfocused        #000000 #434343 #D2D2D2 #292D2E   #222222
+client.urgent           #FF0000 #FF04EE #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background       #000000
 #
 ##------------------------------------
 ## mute after 5 seconds works in commandline, it works!
@@ -584,4 +586,5 @@ exec --no-startup-id "sh -c 'sleep 1; xset s off'"
 
 # turn off the screen and lock for 3 hours of inactivty.
 exec --no-startup-id "sh -c 'sleep 1; xset dpms 0 0 10800'"
-
+# turn off the bluetooth by default
+exec --no-startup-id "sh -c 'sleep 3; rfkill block bluetooth'"
