@@ -212,12 +212,21 @@ handle_image() {
              ;;
     esac
 }
+drop_bigsize() {
+    # 51200 == 50 MB * 1024
+    # change this number for different sizes
+    if [[ `du "${FILE_PATH}" | cut -f1` -gt 5120 ]]; then
+        echo '----- TOO BIG FILE -----'
+        exit 0
+    fi
+}
 # install ccat-git yay
 handle_mime() {
     local mimetype="${1}"
     case "${mimetype}" in
         # Text
         text/* | */xml)
+            drop_bigsize
             if  command -v ccat &>/dev/null; then
                 ccat --color=always ${FILE_PATH}
                 exit 0
